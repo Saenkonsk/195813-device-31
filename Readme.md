@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Антон Саенко](https://up.htmlacademy.ru/htmlcss/31/user/195813).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Кислый](https://htmlacademy.ru/profile/smart-grizzly).
 
 ---
 
