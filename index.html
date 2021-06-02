@@ -2,11 +2,233 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
+    <title>HTML Academy: Девайс — Главная</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
-
+    <header>
+      <a><img src="https://via.placeholder.com/164x35" width="164" height="35" alt="Логотип Device"></a>
+      <!-- Не совсем понимаю как тут должно быть размечено -->
+      <form action="https://echo.htmlacademy.ru" method="POST">
+        <input type="search" placeholder="Поиск по сайту">
+        <button type="submit">Найти</button>
+      </form>
+      <ul>
+        <li><a href="blank.html">Войти</a></li>
+        <li><a href="blank.html">Сравнить</a></li>
+        <li><a href="blank.html">Корзина</a></li>
+      </ul>
+      <nav>
+        <ul>
+          <li>
+            <a href="blank.html">Каталог товаров</a>
+            <ul>
+              <li><a href="blank.html">Виртуальная реальность</a></li>
+              <li><a href="catalog.html">Моноподы для селфи</a></li>
+              <li><a href="blank.html">Экшн-камеры</a></li>
+              <li><a href="blank.html">Фитнес-браслеты</a></li>
+              <li><a href="blank.html">Умные часы</a></li>
+              <li><a href="blank.html">Квадрокоптер</a></li>
+            </ul>
+          </li>
+          <li><a href="blank.html">Доставка</a></li>
+          <li><a href="blank.html">Гарантия</a></li>
+          <li><a href="blank.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Интернет магазин гаджетов Device</h1>
+      <section>
+        <h2>Популярные товары</h2>
+        <!-- Не уверен, что тут необходим именно нумерованный список, т.к. цифра похожа просто на пагинацию в слайдере -->
+        <ol>
+          <li>
+            <img src="https://via.placeholder.com/384x486" width="384" height="486" alt="Палка для селфи">
+            <b>Делай селфи, как Бен Стиллер!</b>
+            <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+            <a href="blank.html">Подробнее</a>
+            <!-- Тут и далее вместо таблицы решил взять список описаний, потому что не могу придумать пример, когда может добавиться вторая строка -->
+            <dl>
+              <dt>Длина палки</dt>
+              <dd>8,5 м</dd>
+              <dt>Вес палки</dt>
+              <dd>5 кг</dd>
+              <dt>Материал</dt>
+              <dd>Карбон</dd>
+            </dl>
+          </li>
+          <li>
+            <img src="https://via.placeholder.com/345x485" width="345" height="485" alt="Фитнес-браслет">
+            <b>Худеем правильно!</b>
+            <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+            <a href="blank.html">Подробнее</a>
+            <dl>
+              <dt>Без подзарядки</dt>
+              <dd>48 часов</dd>
+            </dl>
+          </li>
+          <li>
+            <img src="https://via.placeholder.com/526x334" width="526" height="334" alt="Квадрокоптер">
+            <b>Порхает как бабочка, жалит как пчела!</b>
+            <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+            <a href="blank.html">Подробнее</a>
+            <dl>
+              <dt>Дальность полета</dt>
+              <dd>800 м</dd>
+              <dt>Радиус поражения</dt>
+              <dd>50 м</dd>
+            </dl>
+          </li>
+        </ol>
+      </section>
+      <section>
+        <h2>Категории</h2>
+        <ul>
+          <li>
+            <a href="blank.html">
+              <!-- В дивы потом положу свг -->
+              <div></div>
+              <p>Виртуальная реальность</p>
+            </a>
+          </li>
+          <li>
+            <a href="blank.html">
+              <div></div>
+              <p>Моноподы для селфи</p>
+            </a>
+          </li>
+          <li>
+            <a href="blank.html">
+              <div></div>
+              <p>Экшн-камеры</p>
+            </a>
+          </li>
+          <li>
+            <a href="blank.html">
+              <div></div>
+              <p>Фитнес-браслеты</p>
+            </a>
+          </li>
+          <li>
+            <a href="blank.html">
+              <div></div>
+              <p>Умные часы</p>
+            </a>
+          </li>
+          <li>
+            <a href="blank.html">
+              <div></div>
+              <p>Квадрокоптеры</p>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Услуги</h2>
+          <ul>
+            <li><button type="button">Доставка</button></li>
+            <li><button type="button">Гарантия</button></li>
+            <li><button type="button">Кредит</button></li>
+          </ul>
+          <ul>
+            <li>
+              <h3>Доставка</h3>
+              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+            </li>
+            <li>
+              <h3>Гарантия</h3>
+              <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+            </li>
+            <li>
+              <h3>Кредит</h3>
+              <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+            </li>
+          </ul>
+      </section>
+      <section>
+        <h2>Партнеры</h2>
+        <ul>
+          <li><img src="https://via.placeholder.com/260x100" width="260" height="100" alt="Логотип DJI"></li>
+          <li><img src="https://via.placeholder.com/260x100" width="260" height="100" alt="Логотип SP Gadgets"></li>
+          <li><img src="https://via.placeholder.com/260x100" width="260" height="100" alt="Логотип GoPro"></li>
+          <li><img src="https://via.placeholder.com/260x100" width="260" height="100" alt="Логотип VIVE"></li>
+        </ul>
+      </section>
+      <section>
+        <h2>О нас</h2>
+        <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+        <!-- Вот тут думаю, что параграф связан со списком по смыслу, но не понимаю как это в разметке отразить. И стоит ли вообще? -->
+        <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+        <ul>
+          <li>Деловые линии</li>
+          <li>Автотрейдинг</li>
+          <li>ЖелДорЭкспедиция</li>
+        </ul>
+        <a href="blank.html">Подробнее о нас</a>
+      </section>
+      <section>
+        <h2>Контакты</h2>
+        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+        <a href="#"><img src="https://via.placeholder.com/560x222" width="560" height="222" alt="Карта"></a>
+        <button type="button">Напишите нам</button>
+      </section>
+    </main>
+    <footer>
+      <a><img src="https://via.placeholder.com/164x35" width="164" height="35" alt="Логотип Device"></a>
+      <ul>
+        <li><a href="blank.html">Войти</a></li>
+        <li><a href="blank.html">Сравнить</a></li>
+        <li><a href="blank.html">Корзина</a></li>
+      </ul>
+      <address>Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
+      <ul>
+        <li><a href="blank.html">Доставка</a></li>
+        <li><a href="blank.html">Гарантия</a></li>
+        <li><a href="blank.html">Контакты</a></li>
+      </ul>
+      <p>Тел.: <a href="tel:+78005558628">+7 800 555-86-28</a></p>
+      <ul>
+        <li>
+          <a href="blank.html">
+            <span>Мы в Facebook</span>
+          </a>
+        </li>
+        <li>
+          <a href="blank.html">
+            <span>Мы в Instagram</span>
+          </a>
+        </li>
+        <li>
+          <a href="blank.html">
+            <span>Мы в Twitter</span>
+          </a>
+        </li>
+      </ul>
+      <a href="https://htmlacademy.ru/intensive/htmlcss">Html Academy</a>
+    </footer>
+    <section>
+      <h2>Карта</h2>
+      <button type="button">Закрыть</button>
+      <img src="https://via.placeholder.com/960x573" width="960" height="573" alt="Карта">
+    </section>
+    <section>
+      <h2>Форма обратной связи</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="feedbackForm-name">Ваше имя:</label>
+          <input id="feedbackForm-name" type="text" name="name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="feedbackForm-email">Ваш e-mail:</label>
+          <input id="feedbackForm-email" type="email" name="email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="feedbackForm-text">Текст письма:</label>
+          <textarea id="feedbackForm-text" name="text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+        </p>
+        <button type="submit">Отправить</button>
+      </form>
+      <button type="button">Закрыть</button>
+    </section>
   </body>
 </html>
