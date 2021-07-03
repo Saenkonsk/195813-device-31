@@ -197,7 +197,6 @@ img {
   line-height: 22px;
   font-weight: 800;
   letter-spacing: 0.2em;
-
   text-transform: uppercase;
 }
 
@@ -354,7 +353,7 @@ img {
 .feedback-from__input {
   border: none;
   background-color: rgba(var(--basic-grey-extralight), 1);
-  font-family: Gilroy;
+  font-family: "Gilroy", Arial, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -374,9 +373,9 @@ img {
 }
 
 .feedback-from__input::placeholder {
-font-family: Gilroy;
-font-weight: 400;
-font-size: 14px;
-line-height: 16px;
-color: rgba(var(--basic-black), var(--opacity-40));
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(var(--basic-black), var(--opacity-40));
 }
