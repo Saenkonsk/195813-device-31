@@ -283,6 +283,10 @@ img {
   font-weight: 800;
 }
 
+.caption_catalog {
+  margin-bottom: 30px;
+}
+
 .categories-section {
   margin-bottom: 49px;
 }
@@ -376,6 +380,7 @@ img {
 .breadcrumbs {
   padding: 0;
   margin: 0;
+  margin-bottom: 50px;
   display: flex;
 }
 
@@ -411,12 +416,14 @@ img {
 
 .filter {
   background-color: rgba(var(--basic-grey-light), 1);
-  width: 338px;
+  width: 268px;
+  padding-left: 200px;
 }
 
 .sorting {
   background-color: rgba(var(--basic-grey-light), 1);
   display: flex;
+  margin-bottom: 70px;
 }
 
 .sorting-list_type,
@@ -429,6 +436,8 @@ img {
 .filter-and-sort-wrapper {
   display: grid;
   grid-template-columns: repeat(2, auto);
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .controls-caption_filter {
@@ -477,6 +486,10 @@ img {
 
 .button_sorting:active {
   color: rgba(var(--basic-black), 1);
+}
+
+.cards {
+  margin-left: 72px;
 }
 
 .cards-list {
@@ -530,7 +543,9 @@ img {
   background-color: rgba(var(--special-grey-extralight), 1);
   padding: 0;
   margin: 0;
+  margin-bottom: 78px;
   display: flex;
+  width: 760px;
 }
 
 .pagination-list a {
