@@ -312,10 +312,6 @@ img {
   width: 220px;
 }
 
-/* С таблицей просидел больше часа, но так и не придумал решение:
-Изначально у меня в разметке было 2 tr'a и я таблице хотел дать display: grid
-и поменять order, но chrome самостоятельно добавляет в разметку tbody */
-
 .specification-table {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 13px;
@@ -355,7 +351,7 @@ img {
 }
 
 .caption_catalog {
-  margin-bottom: 30px;
+  margin-top: 44px;
 }
 
 .categories-section {
@@ -514,7 +510,7 @@ img {
 .breadcrumbs {
   padding: 0;
   margin: 0;
-  margin-bottom: 50px;
+  margin-top: 30px;
   display: flex;
 }
 
@@ -522,6 +518,7 @@ img {
   font-size: 14px;
   line-height: 19px;
   color: rgba(var(--basic-black), var(--opacity-30));
+  margin-right: 14px;
 }
 
 .breadcrumbs__link:hover,
@@ -546,6 +543,8 @@ img {
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  margin: 0;
+  padding: 25px 0;
 }
 
 .filter {
@@ -557,13 +556,23 @@ img {
 .sorting {
   background-color: rgba(var(--basic-grey-light), 1);
   display: flex;
-  margin-bottom: 70px;
 }
 
-.sorting-list_type,
+.sorting .controls-caption {
+  padding-left: 72px;
+}
+
 .sorting-list_up-down {
-  padding: 0;
+  padding: 25px 0;
   margin: 0;
+  margin-left: 200px;
+  display: flex;
+}
+
+.sorting-list_type {
+  padding: 25px 0;
+  margin: 0;
+  margin-left: 74px;
   display: flex;
 }
 
@@ -572,10 +581,18 @@ img {
   grid-template-columns: repeat(2, auto);
   max-width: 1440px;
   margin: 0 auto;
+  margin-top: 50px;
 }
 
 .controls-caption_filter {
   background-color: rgba(var(--special-grey), 1);
+  margin: 0;
+}
+
+.filter .button {
+  padding: 0;
+  margin-top: 53px;
+  width: 200px;
 }
 
 .filter__legend {
@@ -584,6 +601,32 @@ img {
   line-height: 17px;
   font-weight: 800;
   letter-spacing: 0.1em;
+}
+
+.filter__fieldset {
+  border: none;
+  width: 200px;
+}
+
+.filter__fieldset ul {
+  padding: 0;
+  margin: 0;
+}
+
+.filter__fieldset li {
+  margin-top: 20px;
+}
+
+.filter__fieldset_cost {
+  margin-top: 70px;
+}
+
+.filter__fieldset_color {
+  margin-top: 38px;
+}
+
+.filter__fieldset_bluetooth {
+  margin-top: 40px;
 }
 
 .controls_cost {
@@ -624,18 +667,37 @@ img {
 
 .cards {
   margin-left: 72px;
+  margin-top: 70px;
 }
 
 .cards-list {
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
+  column-gap: 40px;
+  row-gap: 48px;
 }
 
-.cards-list__item {
-  margin-left: 20px;
-  width: 360px;
+.cards-list_desc {
+  display: flex;
+  margin-top: 30px;
+}
+
+.card-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-buttons .button {
+  width: 200px;
+}
+
+.cards-list__item h3 {
+  width: 270px;
+  margin: 0;
+  padding: 0;
 }
 
 .cards-list__item a {
@@ -675,8 +737,9 @@ img {
 
 .pagination-list {
   background-color: rgba(var(--special-grey-extralight), 1);
-  padding: 0;
+  padding: 25px 0;
   margin: 0;
+  margin-top: 40px;
   margin-bottom: 78px;
   display: flex;
   width: 760px;
@@ -689,6 +752,16 @@ img {
   font-weight: 800;
   letter-spacing: 0.1em;
   color: rgba(var(--basic-black), var(--opacity-30));
+}
+
+.pagination-list__item_prev {
+  margin-left: 30px;
+  margin-right: auto;
+}
+
+.pagination-list__item_next {
+  margin-right: 30px;
+  margin-left: auto;
 }
 
 .pagination-list__item_prev a,
