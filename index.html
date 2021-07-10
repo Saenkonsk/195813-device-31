@@ -12,7 +12,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="content-wrapper">
+      <div class="content-wrapper content-wrapper_header">
         <a class="logo">
           <svg width="163" height="35" viewBox="0 0 163 35" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -39,7 +39,7 @@
         </div>
         <nav>
           <ul class="navigation list-style_none">
-            <li>
+            <li class="navigation__list-item_catalog">
               <a class="navigation__link link" href="blank.html">Каталог товаров</a>
               <ul class="catalog list-style_none">
                 <li>
@@ -84,17 +84,19 @@
             <li>
               <img src="img/selfie-stick.png" width="384" height="486" alt="Палка для селфи">
               <div class="popular-list-item__wrapper">
-                <b class="caption">Делай селфи, как Бен Стиллер!</b>
+                <b class="caption">Делай селфи,<br> как Бен Стиллер!</b>
                 <p class="popular-list__desc">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров
                   длиной и весом всего 5 килограмм.</p>
                 <a class="button" href="blank.html">Подробнее</a>
                 <table class="specification-table">
-                  <tbody class="specification-table__body">
-                    <tr class="specification-table__header">
+                  <thead class="specification-table__head">
+                    <tr>
                       <th>Длина палки</th>
                       <th>Вес палки</th>
                       <th>Материал</th>
                     </tr>
+                  </thead>
+                  <tbody class="specification-table__body">
                     <tr>
                       <td>8,5 м</td>
                       <td>5 кг</td>
@@ -107,15 +109,17 @@
             <li>
               <img src="img/fitness-bracelet.png" width="345" height="485" alt="Фитнес-браслет">
                 <div class="popular-list-item__wrapper">
-                <b class="caption">Худеем правильно!</b>
+                <b class="caption">Худеем<br>правильно!</b>
                 <p class="popular-list__desc">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать
                   диету.</p>
                 <a class="button" href="blank.html">Подробнее</a>
                 <table class="specification-table">
-                  <tbody class="specification-table__body">
-                    <tr class="specification-table__header">
+                  <thead class="specification-table__head">
+                    <tr>
                       <th>Без подзарядки</th>
                     </tr>
+                  </thead>
+                  <tbody class="specification-table__body">
                     <tr>
                       <td>48 часов</td>
                     </tr>
@@ -131,11 +135,13 @@
                   стандартную камеру.</p>
                 <a class="button" href="blank.html">Подробнее</a>
                 <table class="specification-table">
-                  <tbody class="specification-table__body">
-                    <tr class="specification-table__header">
+                  <thead class="specification-table__head">
+                    <tr>
                       <th>Дальность полета</th>
                       <th>Радиус поражения</th>
                     </tr>
+                  </thead>
+                  <tbody class="specification-table__body">
                     <tr>
                       <td>800 м</td>
                       <td>50 м</td>
@@ -395,7 +401,7 @@
             <h2 class="caption">Контакты</h2>
             <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое
               бывает.</p>
-            <a href="#">
+            <a class="map" href="#">
               <img src="img/map-small.png" width="560" height="222" alt="Карта">
             </a>
             <button class="button" type="button">Напишите нам</button>
@@ -518,7 +524,7 @@
         </a>
       </div>
     </footer>
-    <section>
+    <section class="modal__map">
       <h2 class="visually-hidden">Карта</h2>
       <button type="button">Закрыть</button>
       <img src="img/map.png" width="960" height="573" alt="Карта">
@@ -534,7 +540,7 @@
           <label class="feedback-form__label" for="feedbackForm-email">Ваш e-mail:</label>
           <input class="feedback-form__input" id="feedbackForm-email" type="email" name="email" placeholder="email@example.com">
         </p>
-        <p>
+        <p class="feedback-form__text">
           <label class="feedback-form__label" for="feedbackForm-text">Текст письма:</label>
           <textarea class="feedback-form__input" id="feedbackForm-text" name="text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
         </p>

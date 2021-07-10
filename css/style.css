@@ -62,6 +62,7 @@
   --opacity-40: 0.4;
   --opacity-30: 0.3;
   --opacity-20: 0.2;
+  --opacity-15: 0.15;
   --opacity-10: 0.1;
 }
 
@@ -133,6 +134,7 @@ img {
 
 .button {
   text-transform: uppercase;
+  text-align: center;
   border: none;
   background-color: inherit;
   color: rgba(var(--basic-black), 1);
@@ -176,12 +178,19 @@ img {
   font-size: 15px;
   line-height: 21px;
   font-weight: 300;
+  background-color: rgba(var(--special-yellow-light), 1);
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 1200px;
 }
 
-.header .content-wrapper {
-  margin-top: 40px;
-  background-color: rgba(var(--special-yellow-light), 1);
-  margin-bottom: 45px;
+.content-wrapper_header {
+  margin: 0 auto;
+  width: 1040px;
+}
+
+.logo {
+  position: absolute;
 }
 
 .logo:hover path,
@@ -191,6 +200,12 @@ img {
 
 .logo:active path {
   fill: rgba(var(--basic-black), var(--opacity-30));
+}
+
+.user-instruments-wrapper {
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .search {
@@ -219,11 +234,19 @@ img {
 .user-instruments__list {
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-instruments__list li:nth-child(2) {
+  margin-left: auto;
 }
 
 .navigation {
   padding: 0;
   margin: 0;
+  margin-top: 50px;
+  display: flex;
 }
 
 .navigation__link {
@@ -237,13 +260,34 @@ img {
 
 .catalog {
   padding: 0;
+  padding-top: 30px;
   margin: 0;
+  max-height: 146px;
+  display: flex;
+  /* display: none; */
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/* .navigation__list-item_catalog:hover .catalog {
+  display: flex;
+  position: absolute;
+  background-color: rgba(var(--special-yellow-light), 1);
+} */
+
+.catalog li {
+  margin-bottom: 20px;
+  margin-right: 61px;
+}
+
+.catalog li:nth-child(5) {
+  margin-bottom: 45px;
 }
 
 /* Main styles */
 
-.popular-section {
-  margin-bottom: 96px;
+.main {
+  margin-top: 24px;
 }
 
 .popular-list li {
@@ -251,19 +295,44 @@ img {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.popular-list .caption {
+  display: block;
+  margin-top: 104px;
+}
+
+.popular-list__desc {
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+}
+
+.popular-list .button {
+  display: block;
+  margin-top: 60px;
+  width: 220px;
+}
+
+/* С таблицей просидел больше часа, но так и не придумал решение:
+Изначально у меня в разметке было 2 tr'a и я таблице хотел дать display: grid
+и поменять order, но chrome самостоятельно добавляет в разметку tbody */
+
 .specification-table {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 13px;
   line-height: 15px;
   letter-spacing: 0.1em;
-}
-
-.specification-table__body {
+  margin-top: 60px;
   display: grid;
 }
 
-.specification-table__header {
+.specification-table tr {
+  display: grid;
+  grid-template-columns: repeat(3, 180px);
+}
+
+.specification-table__head {
   order: 1;
+  margin-top: 15px;
 }
 
 .specification-table th {
@@ -281,6 +350,8 @@ img {
   font-size: 47px;
   line-height: 58px;
   font-weight: 800;
+  padding: 0;
+  margin: 0;
 }
 
 .caption_catalog {
@@ -288,12 +359,14 @@ img {
 }
 
 .categories-section {
-  margin-bottom: 49px;
+  margin-top: 116px;
 }
 
 .categories-list {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  padding: 0;
+  margin: 0;
 }
 
 .categories-list div {
@@ -311,6 +384,12 @@ img {
 
 .categories-list__item {
   margin-right: 20px;
+}
+
+.categories-list__item p {
+  padding: 0;
+  margin: 0;
+  margin-top: 38px;
 }
 
 .categories-list__item div {
@@ -334,22 +413,42 @@ img {
 }
 
 .services-section {
-  margin-bottom: 90px;
+  margin-top: 84px;
 }
 
 .services-wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 277px 600px;
+  margin-top: 86px;
 }
 
-.services,
+.services {
+  padding: 0;
+  margin: 0;
+  margin-left: 116px;
+}
+
+
 .service-buttons {
   padding: 0;
   margin: 0;
 }
 
+.service-buttons .button {
+  display: block;
+  width: 160px;
+  min-height: 40px;
+  margin-bottom: 12px;
+}
+
+.services p {
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+}
+
 .partners-section {
-  margin-bottom: 90px;
+  margin-top: 75px;
 }
 
 .partners-list {
@@ -362,12 +461,41 @@ img {
 .about-and-contacts-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin-top: 90px;
   margin-bottom: 86px;
+}
+
+.about-and-contacts-wrapper .button {
+  display: block;
+  width: 260px;
+  padding: 0;
+  margin: 0;
+  margin-top: 85px;
+}
+
+.about, .contacts {
+  margin-top: 50px;
 }
 
 .about p,
 .contacts p {
   line-height: 28px;
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+}
+
+.about p:nth-child(2),
+.contacts p:nth-child(2) {
+  margin-top: 50px;
+}
+
+
+.transport-companies-list {
+  padding: 0;
+  margin: 0;
+  margin-top: 60px;
+  margin-left: 32px;
 }
 
 .transport-companies-list li {
@@ -375,6 +503,12 @@ img {
   font-size: 16px;
   line-height: 28px;
   font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.map {
+  margin-top: 40px;
+  display: block;
 }
 
 .breadcrumbs {
@@ -597,6 +731,12 @@ img {
   padding-bottom: 65px;
 }
 
+.logo_footer {
+  display: block;
+  width: 165px;
+  margin-top: 64px;
+}
+
 .logo_footer path {
   fill: rgba(var(--special-yellow-dark), 1);
 }
@@ -612,6 +752,7 @@ img {
 
 .htmlacademy {
   justify-self: end;
+  margin-top: 24px;
 }
 
 .htmlacademy:hover path,
@@ -626,9 +767,12 @@ img {
 .user-instruments-footer {
   padding: 0;
   margin: 0;
+  margin-top: 46px;
+  width: 325px;
   grid-column: 3 / -1;
   justify-self: end;
   display: flex;
+  justify-content: space-between;
 }
 
 .user-instruments-footer__item a {
@@ -647,8 +791,11 @@ img {
 .navigation-footer {
   padding: 0;
   margin: 0;
+  margin-top: 40px;
+  width: 425px;
   justify-self: center;
   display: flex;
+  justify-content: space-between;
 }
 
 .navigation-footer__item a {
@@ -667,10 +814,13 @@ img {
 .social-buttons-list {
   padding: 0;
   margin: 0;
+  margin-top: 24px;
+  width: 136px;
   grid-column: 2 / 3;
   text-align: center;
   justify-self: center;
   display: flex;
+  justify-content: space-between;
 }
 
 .social-buttons-list__item:hover path,
@@ -685,14 +835,52 @@ img {
 .address {
   color: rgba(var(--basic-white), 1);
   font-style: normal;
+  width: 220px;
+  margin-top: 40px;
 }
 
 .phohe {
   justify-self: end;
+  margin-top: 40px;
 }
 
 .phone-link {
   color: rgba(var(--basic-white), 1);
+}
+
+.modal__map {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.feedback-form-section {
+  width: 960px;
+  margin: 0 auto;
+  box-shadow: 0px 10px 16px rgba(var(--basic-black), var(--opacity-15));
+}
+
+.feedback-form {
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
+  column-gap: 40px;
+  margin: 92px 100px 69px 100px;
+}
+
+.feedback-form .button {
+  width: 200px;
+  margin-top: 54px;
+}
+
+.feedback-form p {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.feedback-form__text {
+  grid-column: 1 / -1;
+  margin-top: 32px;
 }
 
 .feedback-form__label {
@@ -709,6 +897,10 @@ img {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-top: 16px;
+  padding-bottom: 15px;
 }
 
 .feedback-form__input:hover {
