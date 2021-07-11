@@ -22,25 +22,27 @@
         </a>
         <div class="user-instruments-wrapper">
           <form action="https://echo.htmlacademy.ru" method="POST">
-            <input class="search" type="search" placeholder="Поиск по сайту">
-            <button class="button button_search" type="submit">Найти</button>
+            <div class="search-bar">
+              <input class="search" type="search" placeholder="Поиск по сайту">
+              <button class="button button_search" type="submit">Найти</button>
+            </div>
           </form>
           <ul class="user-instruments__list list-style_none">
             <li class="user-instuments__item">
-              <a class="link" href="blank.html">Войти</a>
+              <a class="link user-instuments__link user-instuments__link_enter" href="blank.html">Войти</a>
             </li>
             <li class="user-instuments__item">
-              <a class="link" href="blank.html">Сравнить</a>
+              <a class="link user-instuments__link user-instuments__link_compare" href="blank.html">Сравнить</a>
             </li>
             <li class="user-instuments__item">
-              <a class="link" href="blank.html">Корзина</a>
+              <a class="link user-instuments__link user-instuments__link_cart" href="blank.html">Корзина</a>
             </li>
           </ul>
         </div>
         <nav>
           <ul class="navigation list-style_none">
             <li class="navigation__list-item_catalog">
-              <a class="navigation__link link" href="blank.html">Каталог товаров</a>
+              <a class="navigation__link navigation__link_catalog link" href="blank.html">Каталог товаров</a>
               <ul class="catalog list-style_none">
                 <li>
                   <a class="link" href="blank.html">Виртуальная реальность</a>
@@ -62,13 +64,13 @@
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="navigation__list">
               <a class="navigation__link link" href="blank.html">Доставка</a>
             </li>
-            <li>
+            <li class="navigation__list">
               <a class="navigation__link link" href="blank.html">Гарантия</a>
             </li>
-            <li>
+            <li class="navigation__list">
               <a class="navigation__link link" href="blank.html">Контакты</a>
             </li>
           </ul>
@@ -81,13 +83,13 @@
         <section class="popular-section">
           <h2 class="visually-hidden">Популярные товары</h2>
           <ul class="popular-list list-style_none">
-            <li>
-              <img src="img/selfie-stick.png" width="384" height="486" alt="Палка для селфи">
+            <li class="popular-list__item popular-list__item_current">
+              <img class="image_selfie-stick" src="img/selfie-stick.png" width="384" height="486" alt="Палка для селфи">
               <div class="popular-list-item__wrapper">
                 <b class="caption">Делай селфи,<br> как Бен Стиллер!</b>
                 <p class="popular-list__desc">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров
                   длиной и весом всего 5 килограмм.</p>
-                <a class="button" href="blank.html">Подробнее</a>
+                <a class="button" href="blank.html">Подробнее<div class="line"></div></a>
                 <table class="specification-table">
                   <thead class="specification-table__head">
                     <tr>
@@ -106,13 +108,13 @@
                 </table>
               </div>
             </li>
-            <li>
-              <img src="img/fitness-bracelet.png" width="345" height="485" alt="Фитнес-браслет">
+            <li class="popular-list__item">
+              <img class="image_fitness-bracelet" src="img/fitness-bracelet.png" width="345" height="485" alt="Фитнес-браслет">
                 <div class="popular-list-item__wrapper">
                 <b class="caption">Худеем<br>правильно!</b>
                 <p class="popular-list__desc">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать
                   диету.</p>
-                <a class="button" href="blank.html">Подробнее</a>
+                <a class="button" href="blank.html">Подробнее<div class="line"></div></a>
                 <table class="specification-table">
                   <thead class="specification-table__head">
                     <tr>
@@ -127,13 +129,13 @@
                 </table>
               </div>
             </li>
-            <li>
-              <img src="img/quadcopter.png" width="526" height="334" alt="Квадрокоптер">
+            <li class="popular-list__item">
+              <img class="image_quadcopter" src="img/quadcopter.png" width="526" height="334" alt="Квадрокоптер">
               <div class="popular-list-item__wrapper">
                 <b class="caption">Порхает как бабочка, жалит как пчела!</b>
                 <p class="popular-list__desc">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под
                   стандартную камеру.</p>
-                <a class="button" href="blank.html">Подробнее</a>
+                <a class="button" href="blank.html">Подробнее<div class="line"></div></a>
                 <table class="specification-table">
                   <thead class="specification-table__head">
                     <tr>
@@ -149,6 +151,17 @@
                   </tbody>
                 </table>
               </div>
+            </li>
+          </ul>
+          <ul class="popular__controls list-style_none">
+            <li class="popular__controls-item">
+              <div class="popular__controls-button popular__controls-button_current" type="button" aria-label="Третий слайд"></div>
+            </li>
+            <li class="popular__controls-item">
+              <div class="popular__controls-button" type="button" aria-label="Второй слайд"></div>
+            </li>
+            <li class="popular__controls-item">
+              <div class="popular__controls-button" type="button" aria-label="Первый слайд"></div>
             </li>
           </ul>
         </section>
@@ -200,7 +213,7 @@
                     </defs>
                   </svg>
                 </div>
-                <p>Моноподы для селфи</p>
+                <p>Моноподы<br> для селфи</p>
               </a>
             </li>
             <li class="categories-list__item">
@@ -245,7 +258,7 @@
                     </defs>
                   </svg>
                 </div>
-                <p>Экшн-камеры</p>
+                <p>Экшн&#8209;камеры</p>
               </a>
             </li>
             <li class="categories-list__item">
@@ -267,7 +280,7 @@
                     </defs>
                   </svg>
                 </div>
-                <p>Фитнес-браслеты</p>
+                <p>Фитнес&#8209;браслеты</p>
               </a>
             </li>
             <li class="categories-list__item">
@@ -336,28 +349,28 @@
           <h2 class="visually-hidden">Услуги</h2>
             <div class="services-wrapper">
               <ul class="service-buttons list-style_none">
-                <li>
-                  <button class="button" type="button">Доставка</button>
+                <li class="service-buttons__item service-buttons__item_current">
+                  <button class="button service-button service-button_current" type="button">Доставка<div class="line"></div></button>
                 </li>
-                <li>
-                  <button class="button" type="button">Гарантия</button>
+                <li class="service-buttons__item">
+                  <button class="button service-button" type="button">Гарантия<div class="line"></div></button>
                 </li>
-                <li>
-                  <button class="button" type="button">Кредит</button>
+                <li class="service-buttons__item">
+                  <button class="button service-button" type="button">Кредит<div class="line"></div></button>
                 </li>
               </ul>
               <ul class="services list-style_none">
-                <li>
+                <li class="services__item services__item_delivery services__item_current">
                   <h3 class="caption">Доставка</h3>
                   <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,
                     поднимая его на ваш этаж.</p>
                 </li>
-                <li>
+                <li class="services__item services__item_warranty">
                   <h3 class="caption">Гарантия</h3>
                   <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не
                     дом, конечно же.</p>
                 </li>
-                <li>
+                <li class="services__item services__item_credit">
                   <h3 class="caption">Кредит</h3>
                   <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита.
                     Выгодные для нашего банка, разумеется.</p>
@@ -388,14 +401,13 @@
           <section class="about">
             <h2 class="caption">О нас</h2>
             <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-            <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
-            </p>
-            <ul class="transport-companies-list">
+            <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+            <ul class="transport-companies-list list-style_none">
               <li>Деловые линии</li>
               <li>Автотрейдинг</li>
               <li>ЖелДорЭкспедиция</li>
             </ul>
-            <a class="button" href="blank.html">Подробнее о нас</a>
+            <a class="button" href="blank.html">Подробнее о нас<div class="line"></div></a>
           </section>
           <section class="contacts">
             <h2 class="caption">Контакты</h2>
@@ -404,7 +416,7 @@
             <a class="map" href="#">
               <img src="img/map-small.png" width="560" height="222" alt="Карта">
             </a>
-            <button class="button" type="button">Напишите нам</button>
+            <button class="button" type="button">Напишите нам<div class="line"></div></button>
           </section>
         </div>
       </div>
@@ -419,14 +431,14 @@
           </svg>
         </a>
         <ul class="user-instruments-footer list-style_none">
-          <li class="user-instruments-footer__item">
-            <a href="blank.html">Войти</a>
+          <li class="user-instruments-footer__item ">
+            <a class="user-instuments__link_footer user-instuments__link_enter_footer" href="blank.html">Войти</a>
           </li>
           <li class="user-instruments-footer__item">
-            <a href="blank.html">Сравнить</a>
+            <a class="user-instuments__link_footer user-instuments__link_compare_footer" href="blank.html">Сравнить</a>
           </li>
           <li class="user-instruments-footer__item">
-            <a href="blank.html">Корзина</a>
+            <a class="user-instuments__link_footer user-instuments__link_cart_footer" href="blank.html">Корзина</a>
           </li>
         </ul>
         <address class="address">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
@@ -526,7 +538,16 @@
     </footer>
     <section class="modal__map">
       <h2 class="visually-hidden">Карта</h2>
-      <button type="button">Закрыть</button>
+      <button class="button_close" type="button" aria-label="Закрыть">
+        <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="27.5" cy="27.5" r="27.5" fill="#F0C52E" />
+          <g opacity="0.7">
+            <path
+              d="M35.95 37.725L28 29.7625L20.05 37.725L18.275 35.95L26.2375 28L18.275 20.05L20.05 18.275L28 26.2375L35.95 18.2875L37.7125 20.05L29.7625 28L37.7125 35.95L35.95 37.725Z"
+              fill="white" />
+          </g>
+        </svg>
+      </button>
       <img src="img/map.png" width="960" height="573" alt="Карта">
     </section>
     <section class="feedback-form-section">
@@ -544,9 +565,18 @@
           <label class="feedback-form__label" for="feedbackForm-text">Текст письма:</label>
           <textarea class="feedback-form__input" id="feedbackForm-text" name="text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
         </p>
-        <button class="button" type="submit">Отправить</button>
+        <button class="button" type="submit">Отправить<div class="line"></div></button>
       </form>
-      <button type="button">Закрыть</button>
+      <button class="button_close" type="button" aria-label="Закрыть">
+        <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="27.5" cy="27.5" r="27.5" fill="#F0C52E" />
+          <g opacity="0.7">
+            <path
+              d="M35.95 37.725L28 29.7625L20.05 37.725L18.275 35.95L26.2375 28L18.275 20.05L20.05 18.275L28 26.2375L35.95 18.2875L37.7125 20.05L29.7625 28L37.7125 35.95L35.95 37.725Z"
+              fill="white" />
+          </g>
+        </svg>
+      </button>
     </section>
   </body>
 </html>
