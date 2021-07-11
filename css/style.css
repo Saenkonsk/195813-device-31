@@ -242,7 +242,7 @@ img {
   position: absolute;
   width: 1160px;
   height: 164px;
-  top: 135px;
+  top: 134px;
   left: -60px;
   background-color: rgba(var(--special-yellow-light), 1);
   z-index: -1;
@@ -805,6 +805,10 @@ img {
   margin-bottom: 20px;
 }
 
+.service-buttons__item {
+  position: relative;
+}
+
 .service-buttons__item_current {
   background-color: rgba(var(--basic-black), 1);
 }
@@ -829,6 +833,11 @@ img {
 
 .service-buttons .line {
   top: 16px;
+  width: 160px;
+}
+
+.service-button + .line {
+  width: 160px;
 }
 
 .services p {
@@ -947,6 +956,14 @@ img {
 
 .map img {
   display: block;
+}
+
+.button_text-us + .line {
+  width: 260px;
+  top: initial;
+  bottom: 8px;
+  left: 600px;
+
 }
 
 .breadcrumbs {
@@ -1598,6 +1615,13 @@ img {
 .feedback-form .button {
   width: 200px;
   margin-top: 54px;
+}
+
+.button_send + .line {
+  top: initial;
+  bottom: 77px;
+  left: 100px;
+  width: 200px;
 }
 
 .feedback-form p {
