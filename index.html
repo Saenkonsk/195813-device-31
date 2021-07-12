@@ -12,7 +12,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="content-wrapper content-wrapper_header">
+      <div class="content-wrapper content-wrapper_header content-wrapper_header_index">
         <a class="logo">
           <svg width="163" height="35" viewBox="0 0 163 35" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -350,13 +350,13 @@
             <div class="services-wrapper">
               <ul class="service-buttons list-style_none">
                 <li class="service-buttons__item service-buttons__item_current">
-                  <button class="button service-button service-button_current" type="button">Доставка</button><div class="line"></div>
+                  <button class="button service-button service-button_current" type="button">Доставка</button>
                 </li>
                 <li class="service-buttons__item">
-                  <button class="button service-button" type="button">Гарантия</button><div class="line"></div>
+                  <button class="button service-button" type="button">Гарантия</button>
                 </li>
                 <li class="service-buttons__item">
-                  <button class="button service-button" type="button">Кредит</button><div class="line"></div>
+                  <button class="button service-button" type="button">Кредит</button>
                 </li>
               </ul>
               <ul class="services list-style_none">
@@ -380,19 +380,17 @@
         </section>
         <section class="partners-section">
           <h2 class="visually-hidden">Партнеры</h2>
-          <!--  Как заменить контентные изображения при наведении? В голову приходит только
-          добавить в разметку цветные изображения, наложить друг на друга и менять z-index. -->
           <ul class="partners-list list-style_none">
-            <li>
+            <li class="partners-list__item partners-list__item_dji">
               <img src="img/dji.png" width="260" height="100" alt="Логотип DJI">
             </li>
-            <li>
+            <li class="partners-list__item partners-list__item_sp">
               <img src="img/sp.png" width="260" height="100" alt="Логотип SP Gadgets">
             </li>
-            <li>
+            <li class="partners-list__item partners-list__item_gopro">
               <img src="img/gopro.png" width="260" height="100" alt="Логотип GoPro">
             </li>
-            <li>
+            <li class="partners-list__item partners-list__item_vive">
               <img src="img/vive.png" width="260" height="100" alt="Логотип VIVE">
             </li>
           </ul>
@@ -416,7 +414,7 @@
             <a class="map" href="#">
               <img src="img/map-small.png" width="560" height="222" alt="Карта">
             </a>
-            <button class="button button_text-us" type="button">Напишите нам</button><div class="line"></div>
+            <button class="button button_text-us" type="button">Напишите нам</button>
           </section>
         </div>
       </div>
@@ -565,7 +563,7 @@
           <label class="feedback-form__label" for="feedbackForm-text">Текст письма:</label>
           <textarea class="feedback-form__input" id="feedbackForm-text" name="text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
         </p>
-        <button class="button button_send" type="submit">Отправить</button><div class="line"></div>
+        <button class="button button_send" type="submit">Отправить</button>
       </form>
       <button class="button_close" type="button" aria-label="Закрыть">
         <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">

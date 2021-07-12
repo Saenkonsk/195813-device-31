@@ -22,25 +22,27 @@
       </a>
       <div class="user-instruments-wrapper">
         <form action="https://echo.htmlacademy.ru" method="POST">
-          <input class="search" type="search" placeholder="Поиск по сайту">
-          <button class="button button_search" type="submit">Найти</button>
+          <div class="search-bar">
+            <input class="search" type="search" placeholder="Поиск по сайту">
+            <button class="button button_search" type="submit">Найти</button>
+          </div>
         </form>
         <ul class="user-instruments__list list-style_none">
           <li class="user-instuments__item">
-            <a class="link" href="blank.html">Войти</a>
+            <a class="link user-instuments__link user-instuments__link_enter" href="blank.html">Войти</a>
           </li>
           <li class="user-instuments__item">
-            <a class="link" href="blank.html">Сравнить</a>
+            <a class="link user-instuments__link user-instuments__link_compare" href="blank.html">Сравнить</a>
           </li>
           <li class="user-instuments__item">
-            <a class="link" href="blank.html">Корзина</a>
+            <a class="link user-instuments__link user-instuments__link_cart" href="blank.html">Корзина</a>
           </li>
         </ul>
       </div>
       <nav>
         <ul class="navigation list-style_none">
           <li class="navigation__list-item_catalog">
-            <a class="navigation__link link" href="blank.html">Каталог товаров</a>
+            <a class="navigation__link navigation__link_catalog link" href="blank.html">Каталог товаров</a>
             <ul class="catalog list-style_none">
               <li>
                 <a class="link" href="blank.html">Виртуальная реальность</a>
@@ -62,13 +64,13 @@
               </li>
             </ul>
           </li>
-          <li>
+          <li class="navigation__list">
             <a class="navigation__link link" href="blank.html">Доставка</a>
           </li>
-          <li>
+          <li class="navigation__list">
             <a class="navigation__link link" href="blank.html">Гарантия</a>
           </li>
-          <li>
+          <li class="navigation__list">
             <a class="navigation__link link" href="blank.html">Контакты</a>
           </li>
         </ul>
@@ -76,7 +78,9 @@
     </div>
   </header>
   <main>
-    <h1>Пустая страница</h1>
+    <div class="content-wrapper">
+      <h1 class="caption">Пустая страница</h1>
+    </div>
   </main>
   <footer class="footer">
     <div class="content-wrapper content-wrapper_footer">
@@ -88,14 +92,14 @@
         </svg>
       </a>
       <ul class="user-instruments-footer list-style_none">
-        <li class="user-instruments-footer__item">
-          <a href="blank.html">Войти</a>
+        <li class="user-instruments-footer__item ">
+          <a class="user-instuments__link_footer user-instuments__link_enter_footer" href="blank.html">Войти</a>
         </li>
         <li class="user-instruments-footer__item">
-          <a href="blank.html">Сравнить</a>
+          <a class="user-instuments__link_footer user-instuments__link_compare_footer" href="blank.html">Сравнить</a>
         </li>
         <li class="user-instruments-footer__item">
-          <a href="blank.html">Корзина</a>
+          <a class="user-instuments__link_footer user-instuments__link_cart_footer" href="blank.html">Корзина</a>
         </li>
       </ul>
       <address class="address">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
