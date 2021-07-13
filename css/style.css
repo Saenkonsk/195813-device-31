@@ -101,6 +101,7 @@ body {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+  overflow-x: hidden;
 }
 
 a {
@@ -539,7 +540,7 @@ img {
   padding: 0;
   margin: 0;
   position: absolute;
-  bottom: 156px;
+  bottom: 164px;
   right: 98px;
   display: flex;
   width: 62px;
@@ -640,33 +641,32 @@ img {
   width: 220px;
 }
 
-.specification-table {
+.specification-list {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 13px;
   line-height: 15px;
   letter-spacing: 0.1em;
   margin-top: 60px;
-  display: grid;
+  display: flex;
 }
 
-.specification-table tr {
+.specification-list div {
   display: grid;
-  grid-template-columns: repeat(3, 180px);
+  grid-template-rows: repeat (2, 1fr);
+  margin-right: 63px;
 }
 
-.specification-table__head {
+.specification-list dt {
   order: 1;
   margin-top: 15px;
-}
-
-.specification-table th {
   font-weight: 300;
 }
 
-.specification-table td {
+.specification-list dd {
   font-size: 36px;
   line-height: 42px;
   font-weight: 300;
+  margin: 0;
 }
 
 .caption {
@@ -684,7 +684,7 @@ img {
 }
 
 .categories-section {
-  margin-top: 98px;
+  margin-top: 90px;
 }
 
 .categories-list {
@@ -768,6 +768,10 @@ img {
 
 .services__item {
   display: none;
+}
+
+.services__item_delivery p {
+  width: 500px;
 }
 
 .services__item_delivery::after {
@@ -1561,6 +1565,18 @@ img {
   position: relative;
 }
 
+.cards-list__item_new article::after {
+  content: "";
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  background-image: url("../img/icon-new.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  top: 27px;
+  right: 29px;
+}
+
 .cards-list__item:hover .card-buttons {
   display: flex;
 }
@@ -1927,6 +1943,7 @@ img {
   width: 960px;
   margin: 0 auto;
   position: relative;
+  display: none;
 }
 
 .modal__map .button_close {
@@ -1939,6 +1956,7 @@ img {
   margin: 0 auto;
   box-shadow: 0px 10px 16px rgba(var(--basic-black), var(--opacity-15));
   position: relative;
+  display: none;
 }
 
 .feedback-form-section .button_close {
