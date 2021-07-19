@@ -8,7 +8,7 @@
     <link rel="apple-touch-icon" href="img/favicons/favicon-180.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-min.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -23,7 +23,8 @@
         <div class="user-instruments-wrapper">
           <form action="https://echo.htmlacademy.ru" method="POST">
             <div class="search-bar">
-              <input class="search" type="search" placeholder="Поиск по сайту">
+              <label class="visually-hidden" for="search-input">Поиск:</label>
+              <input class="search" id="search-input" type="search" placeholder="Поиск по сайту">
               <button class="button button_search" type="submit">Найти</button>
             </div>
           </form>
@@ -89,7 +90,7 @@
                 <b class="caption">Делай селфи,<br> как Бен Стиллер!</b>
                 <p class="popular-list__desc">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров
                   длиной и весом всего 5 килограмм.</p>
-                <a class="button" href="blank.html">Подробнее<div class="line"></div></a>
+                <a class="button" href="blank.html">Подробнее</a>
                 <dl class="specification-list">
                   <div>
                     <dt>Длина палки</dt>
@@ -112,7 +113,7 @@
                 <b class="caption">Худеем<br>правильно!</b>
                 <p class="popular-list__desc">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать
                   диету.</p>
-                <a class="button" href="blank.html">Подробнее<div class="line"></div></a>
+                <a class="button" href="blank.html">Подробнее</a>
                 <dl class="specification-list">
                   <div>
                     <dt>Без подзарядки</dt>
@@ -127,7 +128,7 @@
                 <b class="caption">Порхает как бабочка, жалит как пчела!</b>
                 <p class="popular-list__desc">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под
                   стандартную камеру.</p>
-                <a class="button" href="blank.html">Подробнее<div class="line"></div></a>
+                <a class="button" href="blank.html">Подробнее</a>
                 <dl class="specification-list">
                   <div>
                     <dt>Дальность полета</dt>
@@ -393,7 +394,7 @@
               <li>Автотрейдинг</li>
               <li>ЖелДорЭкспедиция</li>
             </ul>
-            <a class="button" href="blank.html">Подробнее о нас<div class="line"></div></a>
+            <a class="button" href="blank.html">Подробнее о нас</a>
           </section>
           <section class="contacts">
             <h2 class="caption">Контакты</h2>
@@ -522,9 +523,9 @@
         </a>
       </div>
     </footer>
-    <section class="modal__map">
+    <section class="modal__map modal_hide">
       <h2 class="visually-hidden">Карта</h2>
-      <button class="button_close" type="button" aria-label="Закрыть">
+      <button class="button_close button_close_map" type="button" aria-label="Закрыть">
         <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="27.5" cy="27.5" r="27.5" fill="#F0C52E" />
           <g opacity="0.7">
@@ -534,9 +535,12 @@
           </g>
         </svg>
       </button>
-      <img src="img/map.png" width="960" height="573" alt="Карта">
+      <!-- <img src="img/map.png" width="960" height="573" alt="Карта"> -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d1996.8006327462385!2d30.314908!3d59.9686305!3m2!1i1024!2i768!4f13.1!2m1!1z0L3QsNCxLiDRgNC10LrQuCDQutCw0YDQv9C-0LLQutC4IDXQvw!5e0!3m2!1sru!2sru!4v1626409457173!5m2!1sru!2sru"
+        width="960" height="573" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
-    <section class="feedback-form-section">
+    <section class="feedback-form-section modal_hide">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
@@ -553,7 +557,7 @@
         </p>
         <button class="button button_send" type="submit">Отправить</button>
       </form>
-      <button class="button_close" type="button" aria-label="Закрыть">
+      <button class="button_close button_close_feedback" type="button" aria-label="Закрыть">
         <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="27.5" cy="27.5" r="27.5" fill="#F0C52E" />
           <g opacity="0.7">
@@ -564,5 +568,6 @@
         </svg>
       </button>
     </section>
+    <script src="js/script-min.js"></script>
   </body>
 </html>

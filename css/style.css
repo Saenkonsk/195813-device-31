@@ -153,6 +153,9 @@ img {
   letter-spacing: 0.2em;
   position: relative;
   z-index: 1;
+  margin: 0;
+  padding: 9px 0;
+  padding-top: 9px;
 }
 
 .button::after {
@@ -160,18 +163,8 @@ img {
   position: absolute;
   width: 100%;
   height: 8px;
-  top: 7px;
-  left: 0;
-  background-color: rgba(var(--special-yellow-dark), 1);
-  z-index: -1;
-}
-
-.line {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 8px;
-  top: 7px;
+  /* top: 7px; */
+  top: 16px;
   left: 0;
   background-color: rgba(var(--special-yellow-dark), 1);
   z-index: -1;
@@ -196,7 +189,7 @@ img {
   height: 46px;
 }
 
-.button_search:hover {
+.button_search:hover, .button_search:focus {
   color: rgba(var(--basic-white), 1);
   background-color: rgba(var(--basic-black), 1);
 }
@@ -298,6 +291,10 @@ img {
   display: flex;
   align-content: start;
   align-items: start;
+}
+
+.search-bar .button::after {
+  display: none;
 }
 
 .search {
@@ -540,7 +537,7 @@ img {
   padding: 0;
   margin: 0;
   position: absolute;
-  bottom: 164px;
+  bottom: 166px;
   right: 98px;
   display: flex;
   width: 62px;
@@ -637,7 +634,7 @@ img {
 
 .popular-list .button {
   display: block;
-  margin-top: 59px;
+  margin-top: 49px;
   width: 220px;
 }
 
@@ -646,7 +643,7 @@ img {
   font-size: 13px;
   line-height: 15px;
   letter-spacing: 0.1em;
-  margin-top: 60px;
+  margin-top: 52px;
   display: flex;
 }
 
@@ -684,7 +681,7 @@ img {
 }
 
 .categories-section {
-  margin-top: 90px;
+  margin-top: 88px;
 }
 
 .categories-list {
@@ -845,8 +842,7 @@ img {
 .service-buttons .button {
   display: block;
   width: 160px;
-  min-height: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 
 .service-buttons .button::after {
@@ -934,15 +930,13 @@ img {
   grid-template-columns: 473px 560px;
   column-gap: 127px;
   margin-top: 92px;
-  margin-bottom: 86px;
+  margin-bottom: 79px;
   position: relative;
 }
 
 .about-and-contacts-wrapper .button {
   display: block;
   width: 260px;
-  padding: 0;
-  margin: 0;
 }
 
 .about, .contacts {
@@ -983,11 +977,11 @@ img {
 }
 
 .about .button {
-  margin-top: 77px;
+  margin-top: 68px;
 }
 
 .contacts .button {
-  margin-top: 84px;
+  margin-top: 76px;
 }
 
 .transport-companies-list {
@@ -1387,9 +1381,9 @@ img {
 }
 
 .filter .button {
-  padding: 0;
-  margin-top: 44px;
-  margin-left: 57px;
+  /* padding: 0; */
+  margin-top: 36px;
+  margin-left: 60px;
   width: 200px;
   position: relative;
   z-index: 1;
@@ -1553,7 +1547,7 @@ img {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: 178px;
+  top: 168px;
   left: 77px;
 }
 
@@ -1619,7 +1613,7 @@ img {
   border: none;
   color: rgba(var(--basic-black), var(--opacity-50));
   padding: 0;
-  margin-top: 20px;
+  margin-top: 14px;
 }
 
 .button_add-to-comparison:hover,
@@ -1942,8 +1936,17 @@ img {
 .modal__map {
   width: 960px;
   margin: 0 auto;
-  position: relative;
-  display: none;
+  /* position: relative; */
+  position: absolute;
+  top: 1850px;
+  left:50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  box-shadow: 0px 10px 16px rgba(var(--basic-black), var(--opacity-15));
+}
+
+.modal__map iframe {
+  display: block;
 }
 
 .modal__map .button_close {
@@ -1955,8 +1958,12 @@ img {
   width: 960px;
   margin: 0 auto;
   box-shadow: 0px 10px 16px rgba(var(--basic-black), var(--opacity-15));
-  position: relative;
-  display: none;
+  position: absolute;
+  top: 1187px;
+  left:50%;
+  transform: translateX(-50%);
+  background-color: rgba(var(--basic-white), 1);
+  z-index: 2;
 }
 
 .feedback-form-section .button_close {
@@ -2027,4 +2034,23 @@ img {
   font-size: 14px;
   line-height: 16px;
   color: rgba(var(--basic-black), var(--opacity-40));
+}
+
+.modal_show {
+  display: block;
+  animation: bounce 1s;
+}
+
+.modal_hide {
+  display: none;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }

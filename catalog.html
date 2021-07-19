@@ -8,7 +8,7 @@
   <link rel="apple-touch-icon" href="img/favicons/favicon-180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-min.css" rel="stylesheet">
 </head>
 <body>
   <header class="header">
@@ -23,7 +23,8 @@
       <div class="user-instruments-wrapper">
         <form action="https://echo.htmlacademy.ru" method="POST">
           <div class="search-bar">
-            <input class="search" type="search" placeholder="Поиск по сайту">
+            <label class="visually-hidden" for="search-input">Поиск:</label>
+            <input class="search" id="search-input" type="search" placeholder="Поиск по сайту">
             <button class="button button_search" type="submit">Найти</button>
           </div>
         </form>
